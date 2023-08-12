@@ -27,22 +27,28 @@ public class CaminhoArquivo {
     }
 
     public static CaminhoArquivo getInstance(Integer id) {
-        String b = "/tmp/";
-        String d = null;
-        if (id <= 1000) {
-            d = b + id;
-        } else {
-            int i = id;
-            boolean f = true;
-            while (f) {
-                if (id <= (i * 1000)) {
-                    d = b + i;
-                    f = false;
-                }
-                i++;
-            }
+
+        if(id == null){
+            throw new IDNaoInformadoException();
         }
-        return new CaminhoArquivo(Paths.get(d), Paths.get(d));
+
+       
+            String b = "/tmp/";
+            String d = null;
+            int i = 0;    
+            
+            if(id % 1000 == 0){
+                i = id/1000; 
+                
+            }else{
+                i = (id/1000) +1;                
+            }    
+            d = b+i;   
+        
+        return new CaminhoArquivo(Paths.get(d), Paths.get(d + "/" + id));   
+
+        
+
 
     }
 
