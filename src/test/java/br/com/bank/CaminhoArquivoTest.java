@@ -43,9 +43,9 @@ class CaminhoArquivoTest {
     @Test
     public void deveRetornaErroQuandoIdNaoInformado (){
         Exception e = assertThrows(NullPointerException.class, () -> CaminhoArquivo.getInstance(null));
-        String mensagemEsperada = "ID não informado";
+        String mensagemEsperada = "ID não informado!";
 
-        assertEquals(mensagemEsperada, e.getMessage(), "Mensagens iguais");
+        assertEquals(mensagemEsperada, e.getMessage(), "Mensagens devem ser iguais");
 
         
     
