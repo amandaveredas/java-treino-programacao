@@ -9,23 +9,28 @@ public class Aluno {
 
     @Id
     @GeneratedValue
-    Long id;
+    long id;
 
     String nome;
 
     String email;
+
     
 
-    public Aluno(String nome, String email) {
+    public Aluno() {
+    }
+    
+
+    public Aluno(String nome) {
         this.nome = nome;
-        this.email = email;
     }
 
-    public Long getId() {
+
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -44,7 +49,7 @@ public class Aluno {
     public void setEmail(String email) {
         this.email = email;
     }
+    
 
-    
-    
-}
+
+}    
