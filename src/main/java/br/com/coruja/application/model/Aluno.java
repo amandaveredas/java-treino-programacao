@@ -3,6 +3,8 @@ package br.com.coruja.application.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Aluno {
@@ -14,8 +16,6 @@ public class Aluno {
     String nome;
 
     String email;
-
-    
 
     public Aluno() {
     }
