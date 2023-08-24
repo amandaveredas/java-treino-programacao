@@ -1,0 +1,21 @@
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+class AlunoControllerTest {
+    
+    @Autowired
+    protected WebTestClient web;
+
+    @Autowired
+    private AlunoRepository alunoRepository;
+
+    @BeforeEach
+    public void setUp(){       
+  
+	alunoRepository.deleteAll();
+
+    }
+    
+    ******************************************************************************************
+    
+    git init
+    git checkout -b <nova branch>
+    
